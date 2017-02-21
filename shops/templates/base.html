@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../static/js/jquery-3.1.1.min.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".a").mouseover(function(){
+  $(this).css('color','OrangeRed');
+
+});
+  $(".a").mouseleave(function(){
+  $(this).css('color','white');
+  $(".except").css('color','white');
+
+});
+});
+</script>
+
+    <style>
+    /* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+        .navbar{background-color:Black;position: fixed;width: 100%;height: 73px;
+         border-radius: 0px;border-bottom:2px solid OrangeRed;margin-top:0px;}
+        .about{font-family:'satisfy', cursive ;margin-left:100px;margin-top:8px;}
+        #except{font-family:'satisfy', cursive ;font-size:25px;margin-left:150px;color:OrangeRed;margin-top:8px;}
+        #first-container{ width:100%;height:40px;background-color:OrangeRed;position: fixed;}
+        #consultant{margin-top:5px;color:white;font-size:25px;font-family:'satisfy', cursive ;}
+        #second_nav{margin-left:50px;font-size:18px;font-weight:24px;margin-top:8px;}
+        body{background-color:;}
+}
+
+       .navbar{background-color:Black;position: fixed;width: 100%;height: 73px;
+          border-radius: 0px;border-bottom:2px solid OrangeRed;margin-top:40px;}
+        .about{font-family:'satisfy', cursive ;margin-left:100px;margin-top:8px;}
+        #except{font-family:'satisfy', cursive ;font-size:25px;margin-left:150px;color:OrangeRed;margin-top:8px;}
+        #first-container{ width:100%;height:40px;background-color:OrangeRed;position: fixed;}
+        #consultant{margin-top:5px;color:white;font-size:25px;font-family:'satisfy', cursive ;}
+        #second_nav{margin-left:50px;font-size:18px;font-weight:24px;margin-top:8px;}
+        font{ font-size:25px;}
+    </style>
+</head>
+
+
+<div class="container-fluid" id="first-container">
+  <center><font id="consultant">Consultant</font></center>
+    </div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a id="except" class="navbar-brand" href="#" >Smash</a>
+    </div>
+    <ul class="nav navbar-nav" id="second_nav">
+      <li class="active"><a href="{% url 'shops:home' %}" class="a">TIRES </a></li>
+
+
+    </ul>
+
+
+     <ul class="nav navbar-nav">
+
+
+
+
+    </ul>
+
+  </div>
+</nav>
+
+<body style="background-color:#f2f2f2;">
+{% block content %}
+
+
+{% endblock content %}
+
+
+</body>
+<footer>
+
+</footer>
+</html>

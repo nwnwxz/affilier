@@ -1,0 +1,1 @@
+web: gunicorn affilier.wsgi --log-file -
